@@ -1,0 +1,14 @@
+/* Result.css */
+.result-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.result-container p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.result-container .btn {
+  margin-top: 10px;
+}

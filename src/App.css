@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+/* App.css */
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.doors-container {
+  display: flex;
+  justify-content: center;
+}
+
+.instructions {
+  margin: 20px auto;
+  text-align: left;
+  max-width: 600px;
+}

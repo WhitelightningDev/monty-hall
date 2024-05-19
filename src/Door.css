@@ -1,0 +1,49 @@
+/* Door.css */
+.door {
+    width: 100px;
+    height: 200px;
+    margin: 10px;
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    background-color: lightgray;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 0;
+  }
+
+  
+  .door.selected {
+    background-color: yellowgreen;
+  }
+  
+  .door.revealed {
+    background-color: rgb(235, 154, 154);
+  }
+  
+  .door.prize {
+    background-color: lightgreen;
+  }
+  
+  .door-container {
+    position: relative;
+    width: 200px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+  }
+  
+  .door img {
+    width: 100%; /* Ensure image fills its container */
+    height: 100%; /* Ensure image fills its container */
+    object-fit: contain; /* Maintain aspect ratio while fitting within the container */
+  }
+  
+  /* Additional styles for the prize image */
+  .door.prize img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the prize image is on top */
+  }
