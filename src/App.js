@@ -1,20 +1,21 @@
-// App.js
+// Import necessary dependencies
 import React, { useState } from 'react';
 import './App.css';
 import Doors from './Doors';
 import Result from './Result';
 import ResetButton from './ResetButton';
 
+// Main component for the Monty Hall Problem game
 function App() {
   // State variables to manage game logic
-  const [selectedDoor, setSelectedDoor] = useState(null);
-  const [prizeDoor, setPrizeDoor] = useState(Math.floor(Math.random() * 3));
-  const [revealedDoor, setRevealedDoor] = useState(null);
-  const [gameOver, setGameOver] = useState(false);
-  const [result, setResult] = useState(null);
-  const [gamesPlayed, setGamesPlayed] = useState(0);
-  const [wins, setWins] = useState(0);
-  const [losses, setLosses] = useState(0);
+  const [selectedDoor, setSelectedDoor] = useState(null); // Track the selected door by the player
+  const [prizeDoor, setPrizeDoor] = useState(Math.floor(Math.random() * 3)); // Randomly select the prize door
+  const [revealedDoor, setRevealedDoor] = useState(null); // Track the door revealed by the host
+  const [gameOver, setGameOver] = useState(false); // Track if the game is over
+  const [result, setResult] = useState(null); // Store the result of the game
+  const [gamesPlayed, setGamesPlayed] = useState(0); // Track the total number of games played
+  const [wins, setWins] = useState(0); // Track the number of wins
+  const [losses, setLosses] = useState(0); // Track the number of losses
 
   // Handle door click event
   const handleDoorClick = (doorIndex) => {
@@ -56,6 +57,7 @@ function App() {
     setResult(null);
   };
 
+  // Render the game interface
   return (
     <div className="container">
       <h1 className="text-center mt-4 mb-4">Monty Hall Problem</h1>
@@ -86,4 +88,5 @@ function App() {
   );
 }
 
+// Export the App component
 export default App;
